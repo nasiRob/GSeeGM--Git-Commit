@@ -12,7 +12,7 @@ class CommitPresenter {
     
     var interactor: CommitInteractor?
     var view: ViewBehavior?
-    
+        
     func fetchCommits(author:String , repo:String) {
         interactor?.fetchCommits(author: author, repo: repo)
     }
