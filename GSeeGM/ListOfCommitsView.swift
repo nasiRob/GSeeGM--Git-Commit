@@ -17,6 +17,6 @@ struct ListOfCommitsView: View {
 
 struct ListOfCommits_Previews: PreviewProvider {
     static var previews: some View {
-        ListOfCommitsView(commits: [CommitsEntity]())
+        ListOfCommitsView(commits: [CommitEntity]())
     }
 }

@@ -13,7 +13,8 @@ protocol CommitServiceOutput: class {
 }
 
 protocol ViewBehavior {
-    
+    func navigateToCommit(commits: CommitResponse)
+    func error(error: Error)
 }
 
 protocol InteractorOutput {

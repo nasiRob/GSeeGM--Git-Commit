@@ -13,19 +13,17 @@ struct ContentView: View {
     @State var repo: String = ""
     @State var author: String = ""
     
-    var presenter
-    
+    var presenter: CommitPresenter?
+        
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-                TextField("Repository", text: $repo)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Author or Email", text: $author)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .foregroundColor(Color.blue)
-                    .background(Color.blue)
+                TextField("Repository", text: $repo)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
                 Button(action: {
-                    
+                    self.buttonTapped()
                 }, label: {
                     Text("Get Commits")
                 })
@@ -36,7 +34,20 @@ struct ContentView: View {
     }
     
     func buttonTapped() {
+        if !self.author.isEmpty && !self.repo.isEmpty {
+            presenter?.fetchCommits(author: author, repo: repo)
+        }
+    }
+}
+
+extension ContentView: ViewBehavior {
+    
+    func navigateToCommit(commits: CommitResponse) {
         
+    }
+    
+    func error(error: Error) {
+        //Show Error
     }
 }
 
