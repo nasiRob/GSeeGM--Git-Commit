@@ -11,3 +11,11 @@ import Foundation
 protocol CommitServiceOutput: class {
     func complete(result: Result<CommitResponse,Error>)
 }
+
+protocol ViewBehavior {
+    
+}
+
+protocol InteractorOutput {
+    func output(result: Result<CommitResponse,Error>)
+}

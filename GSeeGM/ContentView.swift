@@ -13,21 +13,30 @@ struct ContentView: View {
     @State var repo: String = ""
     @State var author: String = ""
     
+    var presenter
+    
     var body: some View {
-        VStack(alignment: .leading) {
-            TextField("Repository", text: $repo)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            TextField("Author or Email", text: $author)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .foregroundColor(Color.blue)
-                .background(Color.blue)
-            Button(action: {
-                
-            }, label: {
-                Text("Get Commits")
-            })
+        NavigationView {
+            VStack(alignment: .leading) {
+                TextField("Repository", text: $repo)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("Author or Email", text: $author)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .foregroundColor(Color.blue)
+                    .background(Color.blue)
+                Button(action: {
+                    
+                }, label: {
+                    Text("Get Commits")
+                })
+            }
+            .padding([.leading, .trailing], 70.0)
+            .navigationBarTitle(Text("Search Repo"), displayMode: .inline)
         }
-        .padding([.top, .leading, .trailing], 70.0)
+    }
+    
+    func buttonTapped() {
+        
     }
 }
 

@@ -27,7 +27,7 @@ class GithubRemoteService {
         }.resume()
     }
     
-    func createRequest(_ author: String, repo: String) -> URLRequest? {
+    private func createRequest(_ author: String, repo: String) -> URLRequest? {
         let getCommitUrl = "https://api.github.com/repos/%@/%@/commits"
         guard let url = URL(string: String(format: getCommitUrl, author, repo) ) else {return nil}
         var request = URLRequest(url: url)
@@ -35,7 +35,7 @@ class GithubRemoteService {
         return request
     }
     
-    func decodeData(_ data: Data) -> Result<CommitResponse,Error> {
+    private func decodeData(_ data: Data) -> Result<CommitResponse,Error> {
         do {
             let output = try JSONDecoder().decode(CommitResponse.self, from: data)
             return Result.success(output)

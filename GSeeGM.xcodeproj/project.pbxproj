@@ -16,6 +16,9 @@
 		84B5975E2533C81900BF340B /* GitHubRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5975D2533C81900BF340B /* GitHubRemoteService.swift */; };
 		84B597602533C9BB00BF340B /* CommitResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5975F2533C9BB00BF340B /* CommitResponseEntity.swift */; };
 		84B597622533D30500BF340B /* Contracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B597612533D30500BF340B /* Contracts.swift */; };
+		84B597642533E68200BF340B /* ListOfCommitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B597632533E68200BF340B /* ListOfCommitsView.swift */; };
+		84B597662533E83300BF340B /* CommitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B597652533E83300BF340B /* CommitPresenter.swift */; };
+		84B597682533E89E00BF340B /* CommitInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B597672533E89E00BF340B /* CommitInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		84B5975D2533C81900BF340B /* GitHubRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRemoteService.swift; sourceTree = "<group>"; };
 		84B5975F2533C9BB00BF340B /* CommitResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitResponseEntity.swift; sourceTree = "<group>"; };
 		84B597612533D30500BF340B /* Contracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contracts.swift; sourceTree = "<group>"; };
+		84B597632533E68200BF340B /* ListOfCommitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCommitsView.swift; sourceTree = "<group>"; };
+		84B597652533E83300BF340B /* CommitPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitPresenter.swift; sourceTree = "<group>"; };
+		84B597672533E89E00BF340B /* CommitInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +72,11 @@
 				84B5974B2533C7C700BF340B /* SceneDelegate.swift */,
 				84B5975D2533C81900BF340B /* GitHubRemoteService.swift */,
 				84B597612533D30500BF340B /* Contracts.swift */,
+				84B597652533E83300BF340B /* CommitPresenter.swift */,
+				84B597672533E89E00BF340B /* CommitInteractor.swift */,
 				84B5975F2533C9BB00BF340B /* CommitResponseEntity.swift */,
 				84B5974D2533C7C700BF340B /* ContentView.swift */,
+				84B597632533E68200BF340B /* ListOfCommitsView.swift */,
 				84B5974F2533C7CB00BF340B /* Assets.xcassets */,
 				84B597542533C7CB00BF340B /* LaunchScreen.storyboard */,
 				84B597572533C7CB00BF340B /* Info.plist */,
@@ -155,9 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B597682533E89E00BF340B /* CommitInteractor.swift in Sources */,
 				84B5975E2533C81900BF340B /* GitHubRemoteService.swift in Sources */,
+				84B597662533E83300BF340B /* CommitPresenter.swift in Sources */,
 				84B5974A2533C7C700BF340B /* AppDelegate.swift in Sources */,
 				84B597602533C9BB00BF340B /* CommitResponseEntity.swift in Sources */,
+				84B597642533E68200BF340B /* ListOfCommitsView.swift in Sources */,
 				84B5974C2533C7C700BF340B /* SceneDelegate.swift in Sources */,
 				84B5974E2533C7C700BF340B /* ContentView.swift in Sources */,
 				84B597622533D30500BF340B /* Contracts.swift in Sources */,
