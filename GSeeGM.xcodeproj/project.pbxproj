@@ -19,6 +19,8 @@
 		84B597642533E68200BF340B /* ListOfCommitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B597632533E68200BF340B /* ListOfCommitsView.swift */; };
 		84B597662533E83300BF340B /* CommitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B597652533E83300BF340B /* CommitPresenter.swift */; };
 		84B597682533E89E00BF340B /* CommitInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B597672533E89E00BF340B /* CommitInteractor.swift */; };
+		84B5976A2534808900BF340B /* GetCommit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B597692534808900BF340B /* GetCommit.storyboard */; };
+		84B5976C253480A600BF340B /* GitCommitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5976B253480A600BF340B /* GitCommitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		84B597632533E68200BF340B /* ListOfCommitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCommitsView.swift; sourceTree = "<group>"; };
 		84B597652533E83300BF340B /* CommitPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitPresenter.swift; sourceTree = "<group>"; };
 		84B597672533E89E00BF340B /* CommitInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitInteractor.swift; sourceTree = "<group>"; };
+		84B597692534808900BF340B /* GetCommit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GetCommit.storyboard; sourceTree = "<group>"; };
+		84B5976B253480A600BF340B /* GitCommitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitCommitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84579D2825349B6900AB87AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84B597692534808900BF340B /* GetCommit.storyboard */,
+				84B5976B253480A600BF340B /* GitCommitViewController.swift */,
+				84B597632533E68200BF340B /* ListOfCommitsView.swift */,
+				84B5974D2533C7C700BF340B /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		84B5973D2533C7C700BF340B = {
 			isa = PBXGroup;
 			children = (
@@ -72,11 +87,10 @@
 				84B5974B2533C7C700BF340B /* SceneDelegate.swift */,
 				84B5975D2533C81900BF340B /* GitHubRemoteService.swift */,
 				84B597612533D30500BF340B /* Contracts.swift */,
+				84579D2825349B6900AB87AD /* Views */,
 				84B597652533E83300BF340B /* CommitPresenter.swift */,
 				84B597672533E89E00BF340B /* CommitInteractor.swift */,
 				84B5975F2533C9BB00BF340B /* CommitResponseEntity.swift */,
-				84B5974D2533C7C700BF340B /* ContentView.swift */,
-				84B597632533E68200BF340B /* ListOfCommitsView.swift */,
 				84B5974F2533C7CB00BF340B /* Assets.xcassets */,
 				84B597542533C7CB00BF340B /* LaunchScreen.storyboard */,
 				84B597572533C7CB00BF340B /* Info.plist */,
@@ -151,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B5976A2534808900BF340B /* GetCommit.storyboard in Resources */,
 				84B597562533C7CB00BF340B /* LaunchScreen.storyboard in Resources */,
 				84B597532533C7CB00BF340B /* Preview Assets.xcassets in Resources */,
 				84B597502533C7CB00BF340B /* Assets.xcassets in Resources */,
@@ -166,6 +181,7 @@
 			files = (
 				84B597682533E89E00BF340B /* CommitInteractor.swift in Sources */,
 				84B5975E2533C81900BF340B /* GitHubRemoteService.swift in Sources */,
+				84B5976C253480A600BF340B /* GitCommitViewController.swift in Sources */,
 				84B597662533E83300BF340B /* CommitPresenter.swift in Sources */,
 				84B5974A2533C7C700BF340B /* AppDelegate.swift in Sources */,
 				84B597602533C9BB00BF340B /* CommitResponseEntity.swift in Sources */,

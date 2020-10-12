@@ -12,12 +12,13 @@ import Foundation
 typealias CommitResponse = [CommitEntity]
 
 // MARK: - CommitResponseElement
-struct CommitEntity: Codable {
-    var sha: String?
+struct CommitEntity: Codable, Identifiable {
+    
+    var id: String?
     var commit: Commit?
     
     enum CodingKeys: String, CodingKey {
-        case sha
+        case id = "sha"
         case commit
     }
 }
@@ -40,4 +41,10 @@ struct Commit: Codable {
 struct Author: Codable {
     var name, email: String?
 //    var date: Date?
+}
+
+
+// MARK: - Error
+struct ErrorMessage: Codable {
+    var message: String?
 }

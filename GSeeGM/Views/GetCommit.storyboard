@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xMg-TI-ebL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Git Commit View Controller-->
+        <scene sceneID="kDY-AH-e8u">
+            <objects>
+                <viewController id="oA3-NM-PRd" customClass="GitCommitViewController" customModule="GSeeGM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Ij-Oe-F8o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author / Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EGB-1p-Yp3" userLabel="AuthorTextField">
+                                <rect key="frame" x="89" y="456" width="237" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repository" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4po-iu-c1n" userLabel="RepoTextField">
+                                <rect key="frame" x="89" y="506" width="237" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pb1-bg-HG2">
+                                <rect key="frame" x="0.0" y="427" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itb-Fi-DFe">
+                                <rect key="frame" x="159" y="550" width="94" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="Get Commits!">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4po-iu-c1n" firstAttribute="centerX" secondItem="EGB-1p-Yp3" secondAttribute="centerX" id="2Nw-Hg-dDB"/>
+                            <constraint firstItem="Z3X-8e-2Kz" firstAttribute="trailing" secondItem="EGB-1p-Yp3" secondAttribute="trailing" constant="88" id="3fd-z5-Nhi"/>
+                            <constraint firstItem="EGB-1p-Yp3" firstAttribute="leading" secondItem="Z3X-8e-2Kz" secondAttribute="leading" constant="89" id="3ku-Ym-RzG"/>
+                            <constraint firstItem="itb-Fi-DFe" firstAttribute="centerX" secondItem="Z3X-8e-2Kz" secondAttribute="centerX" constant="-1" id="54d-kD-McF"/>
+                            <constraint firstItem="Z3X-8e-2Kz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pb1-bg-HG2" secondAttribute="trailing" id="Kkg-Qf-jri"/>
+                            <constraint firstItem="4po-iu-c1n" firstAttribute="top" secondItem="EGB-1p-Yp3" secondAttribute="bottom" constant="16" id="MHk-ws-oE4"/>
+                            <constraint firstItem="itb-Fi-DFe" firstAttribute="top" secondItem="4po-iu-c1n" secondAttribute="bottom" constant="10" id="PFQ-Xj-anF"/>
+                            <constraint firstItem="pb1-bg-HG2" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Z3X-8e-2Kz" secondAttribute="leading" id="Q7F-uU-Zic"/>
+                            <constraint firstItem="pb1-bg-HG2" firstAttribute="centerX" secondItem="Z3X-8e-2Kz" secondAttribute="centerX" id="UH2-jM-PSZ"/>
+                            <constraint firstItem="EGB-1p-Yp3" firstAttribute="centerY" secondItem="Z3X-8e-2Kz" secondAttribute="centerY" constant="-2" id="eV5-4Q-Nx1"/>
+                            <constraint firstItem="4po-iu-c1n" firstAttribute="width" secondItem="EGB-1p-Yp3" secondAttribute="width" id="kYI-BZ-R0X"/>
+                            <constraint firstItem="EGB-1p-Yp3" firstAttribute="top" secondItem="pb1-bg-HG2" secondAttribute="bottom" constant="8" id="v98-8w-FeP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Z3X-8e-2Kz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="O84-On-Wcn"/>
+                    <connections>
+                        <outlet property="errorLabel" destination="pb1-bg-HG2" id="SVa-U5-UxP"/>
+                        <outlet property="gitCommitButton" destination="itb-Fi-DFe" id="uCz-pS-ThR"/>
+                        <outlet property="repoField" destination="4po-iu-c1n" id="Jip-kc-aX1"/>
+                        <outlet property="usernameField" destination="EGB-1p-Yp3" id="Xmz-1a-Qo6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHr-Dl-ps5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757.97101449275374" y="126.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SZd-5H-IhR">
+            <objects>
+                <navigationController storyboardIdentifier="SearchScreen" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xMg-TI-ebL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mwo-nw-daz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oA3-NM-PRd" kind="relationship" relationship="rootViewController" id="Ls7-Pq-MFw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EFg-Nc-3f7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-152.17391304347828" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>

@@ -13,10 +13,10 @@ struct ContentView: View {
     @State var repo: String = ""
     @State var author: String = ""
     @State var commits = CommitResponse()
-    @State var navigate = false
+    @State var navigate:Bool = false
     
     var presenter: CommitPresenter?
-        
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
@@ -27,9 +27,9 @@ struct ContentView: View {
                 Button(action: {
                     self.buttonTapped()
                 }, label: {
-                    Text("Get Commits")
+                    Text("Search For Repo")
                 })
-                NavigationLink(repo, destination: ListOfCommitsView(commits: commits), isActive: $navigate).hidden()
+                NavigationLink("Tap To View \(repo)", destination: ListOfCommitsView(commits: self.commits, repo: repo), isActive: self.$navigate).show(isVisible: $navigate)
             }
             .padding([.leading, .trailing], 70.0)
             .navigationBarTitle(Text("Search Repo"), displayMode: .inline)
@@ -41,22 +41,42 @@ struct ContentView: View {
             presenter?.fetchCommits(author: author, repo: repo)
         }
     }
-}
-
-extension ContentView: ViewBehavior {
     
     func navigateToCommit(commits: CommitResponse) {
         self.commits = commits
-        navigate = true
+        self.navigate = true
     }
-    
     func error(error: Error) {
         //Show Error
+        navigate = false
     }
+}
+
+extension ContentView: ViewBehavior {
+
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct Show: ViewModifier {
+    @Binding var isVisible: Bool
+
+    @ViewBuilder
+    func body(content: Content) -> some View {
+        if isVisible {
+            content
+        } else {
+            content.hidden()
+        }
+    }
+}
+
+extension View {
+    func show(isVisible: Binding<Bool>) -> some View {
+        ModifiedContent(content: self, modifier: Show(isVisible: isVisible))
     }
 }
